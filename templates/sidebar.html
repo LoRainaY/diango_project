@@ -1,0 +1,25 @@
+{% block sidebar %}
+
+<style>
+        .card{
+            box-shadow: 0 16px 48px #E3E7EB;
+        }
+       
+</style>
+
+<!-- Sidebar Widgets Column -->
+<div class="col-md-4 float-right ">
+<div class="card my-4">
+        <h5 class="card-header">Добро пожаловать</h5>
+    <div class="card-body">
+        <p class="card-text"> Сегодня {% now "d M G:i" as today_str %}
+{{ today_str }}</p>
+
+        <a href="{% url 'about' %}"
+           class="btn btn-danger" >Узнать подробнее</a>
+
+    </div>
+</div>
+</div>
+
+{% endblock sidebar %}
